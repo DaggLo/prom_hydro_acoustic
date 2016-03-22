@@ -1,0 +1,61 @@
+#body 
+	{
+    background: white url('graph/sea.jpg');
+	background-repeat: no-repeat;
+	}
+#word
+	{
+	position:absolute;
+	left:0px;
+	top:0px;
+	color:red;
+	font-style: italic;
+	font-size: 80%;
+	}
+ul#menu
+	{
+	list-style: none;
+	}
+ul#menu li 
+	{
+	padding-top:8;
+	/*padding-left:1;*/
+	}
+ul#menu li a span 
+	{
+	display: block;
+	width: 100%;
+	}
+ul#menu li a span.top 
+	{
+	font-size: 18px;
+	color:navy;
+	text-align: left;
+	text-decoration: none;
+	}
+ul#menu li a span.bott 
+	{
+	font-size: 14px;
+	color:blue;
+	text-align: right;
+	font-style: italic;
+	visibility: hidden;
+	padding-right:2;
+	text-decoration: underline;
+	}
+ul#menu li a:hover span.top,
+ul#menu li.iehover span.top
+	{
+	color: blue;
+	text-decoration: underline;
+	}
+ul#menu li a:hover span.bott, 
+ul#menu li.iehover span.bott
+	{
+	visibility: visible;
+	}
+ul#menu li a:hover span,
+ul#menu li.iehover span
+	{
+	cursor: pointer;
+	}
