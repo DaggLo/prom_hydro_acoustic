@@ -1,61 +1,110 @@
-#body 
-	{
-    background: white url('graph/sea.jpg');
-	background-repeat: no-repeat;
-	}
-#word
-	{
-	position:absolute;
-	left:0px;
-	top:0px;
-	color:red;
-	font-style: italic;
-	font-size: 80%;
-	}
-ul#menu
-	{
-	list-style: none;
-	}
-ul#menu li 
-	{
-	padding-top:8;
-	/*padding-left:1;*/
-	}
-ul#menu li a span 
-	{
-	display: block;
-	width: 100%;
-	}
-ul#menu li a span.top 
-	{
-	font-size: 18px;
-	color:navy;
-	text-align: left;
-	text-decoration: none;
-	}
-ul#menu li a span.bott 
-	{
-	font-size: 14px;
-	color:blue;
-	text-align: right;
-	font-style: italic;
-	visibility: hidden;
-	padding-right:2;
-	text-decoration: underline;
-	}
+﻿body {
+  /* background: white url('../img/fon.jpg') repeat; */
+}
+
+/* Header */
+.header {
+  background: transparent url('../img/sea.jpg') no-repeat;
+  background-size: cover;
+  height: 150px;
+}
+
+.company-name {
+  margin: 85px 0 0 20px;
+  font: italic small-caps 300% Arial;
+  text-align: left;
+}
+
+.company-slogan {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  color: red;
+  font: italic 95% "Comic Sans MS";
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+               backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+               transform: translate3d(0,0,0);
+}
+
+/* Main part */
+
+.main-container {
+  padding: 2% 10%;
+}
+
+/* Sidebar */
+nav {
+  font-size: large;
+}
+
+.nav .submenu {
+  padding-left: 15%;
+}
+
+/* Main */
+.main-img-1 {
+  float: left;
+  padding: 10px 20px 20px 0;
+}
+
+.main-img-2 {
+  float: right;
+  margin: 10px 0 20px 20px;
+}
+
+/* Footer */
+.footer {
+  font-style: italic;
+  font-size:80%;
+  text-align: center;
+}
+
+/*ul#menu
+  {
+  list-style: none;
+  }
+ul#menu li
+  {
+  padding-top:8;*/
+  /*padding-left:1;*/
+ /* }
+ul#menu li a span
+  {
+  display: block;
+  width: 100%;
+  }
+ul#menu li a span.top
+  {
+  font-size: 18px;
+  color:navy;
+  text-align: left;
+  text-decoration: none;
+  }
+ul#menu li a span.bott
+  {
+  font-size: 14px;
+  color:blue;
+  text-align: right;
+  font-style: italic;
+  visibility: hidden;
+  padding-right:2;
+  text-decoration: underline;
+  }
 ul#menu li a:hover span.top,
 ul#menu li.iehover span.top
-	{
-	color: blue;
-	text-decoration: underline;
-	}
-ul#menu li a:hover span.bott, 
+  {
+  color: blue;
+  text-decoration: underline;
+  }
+ul#menu li a:hover span.bott,
 ul#menu li.iehover span.bott
-	{
-	visibility: visible;
-	}
+  {
+  visibility: visible;
+  }
 ul#menu li a:hover span,
 ul#menu li.iehover span
-	{
-	cursor: pointer;
-	}
+  {
+  cursor: pointer;
+  }*/
