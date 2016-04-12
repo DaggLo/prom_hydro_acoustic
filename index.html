@@ -4,11 +4,13 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
     <meta name="author" content="">
     <meta name="keywords" content="промысловая гидроакустика, количественная оценка запасов, гидроакустический комплекс">
     <title>ООО "ПромГидроакустика</title>
     <link rel="shortcut icon" href='img/favicon.ico'>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="css/pha.css">
     <script src="scripts/pha.js"></script>
   </head>
@@ -16,13 +18,13 @@
   <body>
     <div class="container-fluid">
 
-      <header class="row">
-        <div>ООО "Промысловая гидроакустика"</div>
-        <div>MOBILIS IN MOBILI</div>
+      <header class="row header">
+        <div class="company-name">ооо "промысловая гидроакустика"</div>
+        <div class="company-slogan" id="word" onLoad="showBrowVer()">MOBILIS IN MOBILI</div>
       </header>
 
-      <div class="row">
-        <menu class="col-md-3">
+      <main class="row main">
+        <menu class="col-md-3 menu">
           <ul id="menu">
             <li>
               <a href="base.html" target="base">
@@ -99,33 +101,35 @@
           </ul>
         </menu>
 
-        <main class="col-md-9">
-          <span style="position:absolute;left:100px;top:100px;">
+        <section class="col-md-9 main-section">
+          <!-- <span style="position:absolute;left:100px;top:100px;"> -->
             <img src="img/ind1.png" title="3D батиметрия русловой ямы Иртыша">
-          </span>
-          <span style="position:absolute;left:350px;top:150px;">
+          <!-- </span> -->
+          <!-- <span style="position:absolute;left:350px;top:150px;"> -->
             <img SRC="img/ind2.png" title="Эхограмма омуля Байкала">
-          </span>
-          <span style="position:absolute;left:700px;top:50px;">
+          <!-- </span> -->
+          <!-- <span style="position:absolute;left:700px;top:50px;"> -->
             <img SRC="img/ind4.png" title="Эхограмма омуля Байкала">
-          </span>
-          <span style="position:absolute;left:50px;top:450px;">
+          <!-- </span> -->
+          <!-- <span style="position:absolute;left:50px;top:450px;"> -->
             <img SRC="img/ind3.png" title="Эхограмма онежской ряпушки">
-          </span>
-          <span style="position:absolute;left:650px;top:450px;">
+          <!-- </span> -->
+          <!-- <span style="position:absolute;left:650px;top:450px;"> -->
             <img SRC="img/ind6.png" title="Эхограмма молоди озерновской нерки">
-          </span>
-          <span style="position:absolute;left:450px;top:300px;">
+          <!-- </span> -->
+          <!-- <span style="position:absolute;left:450px;top:300px;"> -->
             <img SRC="img/ind7.png" title="Станция комплекса 'NetCor'">
-          </span>
-        </main>
+          <!-- </span> -->
+        </section>
 
-      </div>
+      </main>
 
-      <footer>
-        <p style="position:absolute;left:400;top:700px;font-style:italic;font-size:80%;text-align:center">
-          &copy &reg ООО "ПромГидроакустика", 2012
-        </p>
+      <footer class="row footer">
+        <div class="col-md-12">
+          <p style="position:absolute;left:400;top:700px;font-style:italic;font-size:80%;text-align:center">
+            &copy &reg ООО "ПромГидроакустика", 2012
+          </p>
+        </div>
       </footer>
 
     </div>
