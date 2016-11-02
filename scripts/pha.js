@@ -1,4 +1,4 @@
-/*var navHover = function()
+﻿/*var navHover = function()
 	{
 	var lis = document.getElementById("menu1").getElementsByTagName("LI");
 	for (var i=0; i<lis.length; i++)
