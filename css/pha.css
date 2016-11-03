@@ -1,16 +1,17 @@
 ﻿body {
-  background: white url('../img/fon.jpg') repeat;
+  /* background: white url('../img/fon.jpg') repeat; */
 }
 
+/* Header */
 .header {
   background: transparent url('../img/sea.jpg') no-repeat;
   background-size: cover;
-
+  height: 150px;
 }
 
 .company-name {
-  margin: 2%;
-  font: italic small-caps 250% Arial;
+  margin: 85px 0 0 20px;
+  font: italic small-caps 300% Arial;
   text-align: left;
 }
 
@@ -22,6 +23,23 @@
   font: italic 95% "Comic Sans MS";
 }
 
+/* Main part */
+.main-container {
+  padding: 2% 10%;
+}
+
+/* Sidebar */
+
+/* Main */
+.main-img-1 {
+  float: left;
+  padding: 10px 20px 20px 0;
+}
+
+.main-img-2 {
+  float: right;
+  margin: 10px 0 20px 20px;
+}
 /*ul#menu
   {
   list-style: none;
