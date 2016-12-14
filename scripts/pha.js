@@ -24,8 +24,8 @@ var red=0;
 var green=0;
 var blue=0;
 //var count=0;
-var width=1100; // ширина
-var height=80; // высота
+var width=1100; // С€РёСЂРёРЅР°
+var height=80; // РІС‹СЃРѕС‚Р°
 var yMin=0;
 var iX=xinc;
 var iY=yinc;
@@ -33,8 +33,8 @@ function move()
 	{
 	// var word=document.all.word.style;
 	var word = document.getElementById("word").style;
-	/*var width=document.body.clientWidth; // ширина
-    var height=document.body.clientHeight; // высота   */
+	/*var width=document.body.clientWidth; // С€РёСЂРёРЅР°
+    var height=document.body.clientHeight; // РІС‹СЃРѕС‚Р°   */
 	yoff+=yinc;
 	if(yoff>=height)
 		yinc=-1;
@@ -94,9 +94,9 @@ function MakeColor(red,green,blue)
 //--------------------------------------------------------------------------------
 function showBrowVer()
 	{
-	var data = browserDetectNav();      //вызываем функцию, параметр НЕ передаем,
-													//поэтому в результате получим все знаки версии после запятой
-	//alert("Браузер: "+data[0]); //выводим результат
+	var data = browserDetectNav();      //РІС‹Р·С‹РІР°РµРј С„СѓРЅРєС†РёСЋ, РїР°СЂР°РјРµС‚СЂ РќР• РїРµСЂРµРґР°РµРј,
+													//РїРѕСЌС‚РѕРјСѓ РІ СЂРµР·СѓР»СЊС‚Р°С‚Рµ РїРѕР»СѓС‡РёРј РІСЃРµ Р·РЅР°РєРё РІРµСЂСЃРёРё РїРѕСЃР»Рµ Р·Р°РїСЏС‚РѕР№
+	//alert("Р‘СЂР°СѓР·РµСЂ: "+data[0]); //РІС‹РІРѕРґРёРј СЂРµР·СѓР»СЊС‚Р°С‚
 	if(data[0]=="Chrome")
 		{
 		yoff=-10;
@@ -131,18 +131,18 @@ function showBrowVer()
 function browserDetectNav(chrAfterPoint)
 	{
 	var
-		UA=window.navigator.userAgent,       // содержит переданный браузером юзерагент
+		UA=window.navigator.userAgent,       // СЃРѕРґРµСЂР¶РёС‚ РїРµСЂРµРґР°РЅРЅС‹Р№ Р±СЂР°СѓР·РµСЂРѕРј СЋР·РµСЂР°РіРµРЅС‚
 		//--------------------------------------------------------------------------------
 		OperaB = /Opera[ \/]+\w+\.\w+/i,     //
 		OperaV = /Version[ \/]+\w+\.\w+/i,   //
-		FirefoxB = /Firefox\/\w+\.\w+/i,     // шаблоны для распарсивания юзерагента
+		FirefoxB = /Firefox\/\w+\.\w+/i,     // С€Р°Р±Р»РѕРЅС‹ РґР»СЏ СЂР°СЃРїР°СЂСЃРёРІР°РЅРёСЏ СЋР·РµСЂР°РіРµРЅС‚Р°
 		ChromeB = /Chrome\/\w+\.\w+/i,       //
 		SafariB = /Version\/\w+\.\w+/i,      //
 		IEB = /MSIE *\d+\.\w+/i,             //
 		SafariV = /Safari\/\w+\.\w+/i,       //
 		//--------------------------------------------------------------------------------
-		browser = new Array(),               //массив с данными о браузере
-		browserSplit = /[ \/\.]/i,           //шаблон для разбивки данных о браузере из строки
+		browser = new Array(),               //РјР°СЃСЃРёРІ СЃ РґР°РЅРЅС‹РјРё Рѕ Р±СЂР°СѓР·РµСЂРµ
+		browserSplit = /[ \/\.]/i,           //С€Р°Р±Р»РѕРЅ РґР»СЏ СЂР°Р·Р±РёРІРєРё РґР°РЅРЅС‹С… Рѕ Р±СЂР°СѓР·РµСЂРµ РёР· СЃС‚СЂРѕРєРё
 		OperaV = UA.match(OperaV),
 		Firefox = UA.match(FirefoxB),
 		Chrome = UA.match(ChromeB),
@@ -169,17 +169,17 @@ function browserDetectNav(chrAfterPoint)
 						if ((!Safari=="")&&(!SafariV==""))
 							browser[0] = Safari[0].replace("Version", "Safari");
 
-//------------ Разбивка версии -----------
+//------------ Р Р°Р·Р±РёРІРєР° РІРµСЂСЃРёРё -----------
 	var
-		outputData; // возвращаемый функцией массив значений
-					// [0] - имя браузера, [1] - целая часть версии
-					// [2] - дробная часть версии
+		outputData; // РІРѕР·РІСЂР°С‰Р°РµРјС‹Р№ С„СѓРЅРєС†РёРµР№ РјР°СЃСЃРёРІ Р·РЅР°С‡РµРЅРёР№
+					// [0] - РёРјСЏ Р±СЂР°СѓР·РµСЂР°, [1] - С†РµР»Р°СЏ С‡Р°СЃС‚СЊ РІРµСЂСЃРёРё
+					// [2] - РґСЂРѕР±РЅР°СЏ С‡Р°СЃС‚СЊ РІРµСЂСЃРёРё
 	if (browser[0] != null)
 		outputData = browser[0].split(browserSplit);
 	if ((chrAfterPoint==null)&&(outputData != null))
 		{
 		chrAfterPoint=outputData[2].length;
-		outputData[2] = outputData[2].substring(0, chrAfterPoint); // берем нужное ко-во знаков
+		outputData[2] = outputData[2].substring(0, chrAfterPoint); // Р±РµСЂРµРј РЅСѓР¶РЅРѕРµ РєРѕ-РІРѕ Р·РЅР°РєРѕРІ
 		return(outputData);
 		}
 	else return(false);
