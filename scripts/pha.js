@@ -9,59 +9,56 @@ blue = 0,
 width = 1100, // ширина
 height = 80, // высота
 yMin = 0,
-iX = xinc,
-iY = yinc;
+iX = xInc,
+iY = yInc,
+slogan;
 //var count = 0;
 
 function move() {
-  // var word = document.all.word.style;
-  var word = document.getElementById("word").style;
-  /*var width = document.body.clientWidth; // ширина
-    var height = document.body.clientHeight; // высота   */
-  yoff += yinc;
-  xoff += 2 * xinc;
+  yOff += yInc;
+  xOff += 2 * xInc;
 
-  if (yoff >= height) {
-    yinc = -1;
+  if (yOff >= height) {
+    yInc = -1;
   }
 
-  if (yoff <= yMin) {
-    yinc = 1;
+  if (yOff <= yMin) {
+    yInc = 1;
   }
 
-  if (xoff >= width) {
-    xinc = -1;
+  if (xOff >= width) {
+    xInc = -1;
   }
 
-  if (xoff <= 0) {
-    xinc=1;
+  if (xOff <= 0) {
+    xInc=1;
   }
 
-  word.top = yoff + "px";
-  word.left = xoff + "px";
+  slogan.style.top = yOff + "px";
+  slogan.style.left = xOff + "px";
 
   /*if (count >= 50) {
     red = Math.round(Math.random() * 255);
     green = Math.round(Math.random() * 255);
     blue = Math.round(Math.random() * 100 + 155);
-    word.color = MakeColor(red, green, blue);
+    slogan.color = MakeColor(red, green, blue);
     count = 0;
   }*/
 
-  if (iX != xinc) {
+  if (iX != xInc) {
     red = Math.round(Math.random() * 255);
     green = Math.round(Math.random() * 255);
     blue = Math.round(Math.random() * 255);
-    word.color = MakeColor(red, green ,blue);
-    iX = xinc;
+    slogan.color = MakeColor(red, green ,blue);
+    iX = xInc;
   }
 
-  if (iY != yinc) {
+  if (iY != yInc) {
     red = Math.round(Math.random() * 255);
     green = Math.round(Math.random() * 255);
     blue = Math.round(Math.random() * 255);
-    word.color = MakeColor(red, green, blue);
-    iY = yinc;
+    slogan.color = MakeColor(red, green, blue);
+    iY = yInc;
   }
 
   window.requestAnimationFrame(move);
@@ -118,6 +115,7 @@ function showBrowVer() {
     }
   }
 
+  slogan = document.getElementById("slogan");
   move();
 }
 
