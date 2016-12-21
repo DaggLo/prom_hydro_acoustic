@@ -149,6 +149,7 @@
 
     <script>
       function animateHeader() {
+        'use strict';
 
         // Variables for the animated header.
         var slogan = document.getElementById("slogan"),
@@ -156,7 +157,7 @@
         yOff = 0,
         xInc = 1,
         yInc = 1,
-        width = --document.getElementById("header").clientWidth - slogan.clientWidth,
+        width = document.getElementById("header").clientWidth - slogan.clientWidth - 1,
         height = document.getElementById("header").clientHeight - slogan.clientHeight;
 
         // This makes slogan drift.
