@@ -159,8 +159,8 @@
         red = 0,
         green = 0,
         blue = 0,
-        width = document.getElementById("header").offsetWidth,
-        height = document.getElementById("header").offsetHeight,
+        width = --document.getElementById("header").clientWidth - slogan.clientWidth,
+        height = document.getElementById("header").clientHeight - slogan.clientHeight,
         yMin = 0,
         iX = xInc,
         iY = yInc;
@@ -189,20 +189,13 @@
           slogan.style.top = yOff + "px";
           slogan.style.left = xOff + "px";
 
-          if (iX != xInc) {
+          if (iX != xInc || iY != yInc) {
             red = Math.round(Math.random() * 255);
             green = Math.round(Math.random() * 255);
             blue = Math.round(Math.random() * 255);
-            slogan.color = makeColor(red, green, blue);
-            iX = xInc;
-          }
+            slogan.style.color = makeColor(red, green, blue);
 
-          if (iY != yInc) {
-            red = Math.round(Math.random() * 255);
-            green = Math.round(Math.random() * 255);
-            blue = Math.round(Math.random() * 255);
-            slogan.color = makeColor(red, green, blue);
-            iY = yInc;
+            iX != xInc ? iX = xInc : iY = yInc;
           }
 
           window.requestAnimationFrame(makeMove);
@@ -225,6 +218,7 @@
           if (blue.length == 1) {
             blue = '0' + blue;
           }
+
           return "#" + red + green + blue;
         }
 
