@@ -21,6 +21,11 @@
   top: 0px;
   color: red;
   font: italic 95% "Comic Sans MS";
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+               backface-visibility: hidden;
+  -webkit-transform: translate3d(0,0,0);
+               transform: translate3d(0,0,0);
 }
 
 /* Main part */
