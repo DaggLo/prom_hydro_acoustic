@@ -96,7 +96,7 @@ function showBrowVer() {
     yOff = -10;
     height = 70;
     yMin =- 10;
-    width = 110;
+    width = 1110;
   } else {
 
     if (data[0] == "Safari") {
