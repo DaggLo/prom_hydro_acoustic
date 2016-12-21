@@ -31,7 +31,7 @@ function move() {
   }
 
   if (xOff <= 0) {
-    xInc=1;
+    xInc = 1;
   }
 
   slogan.style.top = yOff + "px";
@@ -49,7 +49,7 @@ function move() {
     red = Math.round(Math.random() * 255);
     green = Math.round(Math.random() * 255);
     blue = Math.round(Math.random() * 255);
-    slogan.color = MakeColor(red, green ,blue);
+    slogan.color = MakeColor(red, green, blue);
     iX = xInc;
   }
 
@@ -93,24 +93,24 @@ function showBrowVer() {
   var data = browserDetectNav();
 
   if (data[0] == "Chrome") {
-    yoff=-10;
-    height=70;
-    yMin=-10;
-    width=1110;
+    yOff = -10;
+    height = 70;
+    yMin =- 10;
+    width = 110;
   } else {
 
     if (data[0] == "Safari") {
-      yoff=-10;
-      height=70;
-      yMin=-10;
-      width=1110;
-      } else {
+      yOff =- 10;
+      height = 70;
+      yMin =- 10;
+      width = 1110;
+    } else {
 
       if (data[0] == "Firefox") {
-        yoff=-10;
-        height=75;
-        yMin=-10;
-        width=1140;
+        yOff =- 10;
+        height = 75;
+        yMin =- 10;
+        width = 1140;
       }
     }
   }
@@ -123,7 +123,8 @@ function showBrowVer() {
 function browserDetectNav(chrAfterPoint) {
 
   // содержит переданный браузером юзерагент
-  var UA=window.navigator.userAgent,
+  var UA = window.navigator.userAgent,
+
   //--------------------------------------------------------------------------------
   // шаблоны для распарсивания юзерагента
   OperaB = /Opera[ \/]+\w+\.\w+/i,
@@ -133,6 +134,7 @@ function browserDetectNav(chrAfterPoint) {
   SafariB = /Version\/\w+\.\w+/i,
   IEB = /MSIE *\d+\.\w+/i,
   SafariV = /Safari\/\w+\.\w+/i,
+
   //--------------------------------------------------------------------------------
   //массив с данными о браузере
   browser = new Array(),
@@ -196,8 +198,8 @@ function browserDetectNav(chrAfterPoint) {
 
     // берем нужное ко-во знаков
     outputData[2] = outputData[2].substring(0, chrAfterPoint);
-    return(outputData);
+    return outputData;
 
-  } else return(false);
+  } else return false;
 }
 //-------------------------------------------------------------------------------------
