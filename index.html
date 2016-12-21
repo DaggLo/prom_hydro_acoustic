@@ -14,10 +14,10 @@
     <link rel="stylesheet" href="css/pha.css">
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="scripts/pha.js"></script>
+    <!-- <script src="scripts/pha.js"></script> -->
   </head>
 
-  <body onload="showBrowVer()">
+  <body onload="animateHeader()">
     <div class="container-fluid">
 
       <header class="header row" id="header">
@@ -146,6 +146,91 @@
       </footer>
 
     </div>
+
+    <script>
+      function animateHeader() {
+
+        // Variables for the animated header.
+        var slogan = document.getElementById("slogan"),
+        xOff = 0,
+        yOff = 0,
+        xInc = 1,
+        yInc = 1,
+        red = 0,
+        green = 0,
+        blue = 0,
+        width = document.getElementById("header").offsetWidth,
+        height = document.getElementById("header").offsetHeight,
+        yMin = 0,
+        iX = xInc,
+        iY = yInc;
+
+        // This makes slogan drift.
+        function makeMove() {
+          yOff += yInc;
+          xOff += 2 * xInc;
+
+          if (yOff >= height) {
+            yInc = -1;
+          }
+
+          if (yOff <= yMin) {
+            yInc = 1;
+          }
+
+          if (xOff >= width) {
+            xInc = -1;
+          }
+
+          if (xOff <= 0) {
+            xInc = 1;
+          }
+
+          slogan.style.top = yOff + "px";
+          slogan.style.left = xOff + "px";
+
+          if (iX != xInc) {
+            red = Math.round(Math.random() * 255);
+            green = Math.round(Math.random() * 255);
+            blue = Math.round(Math.random() * 255);
+            slogan.color = makeColor(red, green, blue);
+            iX = xInc;
+          }
+
+          if (iY != yInc) {
+            red = Math.round(Math.random() * 255);
+            green = Math.round(Math.random() * 255);
+            blue = Math.round(Math.random() * 255);
+            slogan.color = makeColor(red, green, blue);
+            iY = yInc;
+          }
+
+          window.requestAnimationFrame(makeMove);
+        }
+
+        // This makes slogan color change.
+        function makeColor(red, green, blue) {
+          red = red.toString(16);
+          green = green.toString(16);
+          blue = blue.toString(16);
+
+          if (red.length == 1) {
+            red = '0' + red;
+          }
+
+          if (green.length == 1) {
+            green = '0' + green;
+          }
+
+          if (blue.length == 1) {
+            blue = '0' + blue;
+          }
+          return "#" + red + green + blue;
+        }
+
+        window.requestAnimationFrame(makeMove);
+      }
+    </script>
   </body>
 
 </html>
