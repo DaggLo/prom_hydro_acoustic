@@ -153,12 +153,9 @@
         // Variables for the animated header.
         var slogan = document.getElementById("slogan"),
         xOff = 0,
-        yOff = 0
-        yMin = 0,
+        yOff = 0,
         xInc = 1,
         yInc = 1,
-        iX = xInc,
-        iY = yInc,
         width = --document.getElementById("header").clientWidth - slogan.clientWidth,
         height = document.getElementById("header").clientHeight - slogan.clientHeight;
 
@@ -167,33 +164,18 @@
           yOff += yInc;
           xOff += 2 * xInc;
 
-          if (yOff >= height) {
-            yInc = -1;
-          }
+          if (yOff >= height || yOff <= 0 || xOff >= width || xOff <= 0) {
+            var red = Math.round(Math.random() * 255),
+            green = Math.round(Math.random() * 255),
+            blue = Math.round(Math.random() * 255);
 
-          if (yOff <= yMin) {
-            yInc = 1;
-          }
+            slogan.style.color = makeColor(red, green, blue);
 
-          if (xOff >= width) {
-            xInc = -1;
-          }
-
-          if (xOff <= 0) {
-            xInc = 1;
+            (yOff >= height || yOff <= 0) ? yInc = -yInc : xInc = -xInc;
           }
 
           slogan.style.top = yOff + "px";
           slogan.style.left = xOff + "px";
-
-          if (iX != xInc || iY != yInc) {
-            red = Math.round(Math.random() * 255);
-            green = Math.round(Math.random() * 255);
-            blue = Math.round(Math.random() * 255);
-            slogan.style.color = makeColor(red, green, blue);
-
-            iX != xInc ? iX = xInc : iY = yInc;
-          }
 
           window.requestAnimationFrame(makeMove);
         }
@@ -215,6 +197,7 @@
 
           return finalColor;
         }
+
         window.requestAnimationFrame(makeMove);
       }
     </script>
