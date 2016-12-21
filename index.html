@@ -166,11 +166,7 @@
           xOff += 2 * xInc;
 
           if (yOff >= height || yOff <= 0 || xOff >= width || xOff <= 0) {
-            var red = Math.round(Math.random() * 255),
-            green = Math.round(Math.random() * 255),
-            blue = Math.round(Math.random() * 255);
-
-            slogan.style.color = makeColor(red, green, blue);
+            slogan.style.color = makeColor();
 
             (yOff >= height || yOff <= 0) ? yInc = -yInc : xInc = -xInc;
           }
@@ -182,18 +178,19 @@
         }
 
         // This makes slogan color change.
-        function makeColor(red, green, blue) {
-          var colorArr = [red, green, blue],
+        function makeColor() {
+          var color,
           finalColor = "#";
 
           for (var i = 0; i < 3; i++) {
-            colorArr[i] = colorArr[i].toString(16);
+            color = Math.round(Math.random() * 255);
+            color = color.toString(16);
 
-            if (colorArr[i].length == 1) {
-              colorArr[i] = '0' + colorArr[i];
+            if (color.length == 1) {
+              color = '0' + color;
             }
 
-            finalColor = finalColor + colorArr[i];
+            finalColor = finalColor + color;
           }
 
           return finalColor;
