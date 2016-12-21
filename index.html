@@ -153,9 +153,9 @@
 
         // Variables for the animated header.
         var slogan = document.getElementById("slogan"),
-        xOff = 0,
+        xOff = 0, // offset
         yOff = 0,
-        xInc = 1,
+        xInc = 1, // increment
         yInc = 1,
         width = document.getElementById("header").clientWidth - slogan.clientWidth - 1,
         height = document.getElementById("header").clientHeight - slogan.clientHeight;
@@ -165,9 +165,11 @@
           yOff += yInc;
           xOff += 2 * xInc;
 
+          // Checks whether the slogan reached the border of his parent node.
           if (yOff >= height || yOff <= 0 || xOff >= width || xOff <= 0) {
             slogan.style.color = makeColor();
 
+            // Switching the increment.
             (yOff >= height || yOff <= 0) ? yInc = -yInc : xInc = -xInc;
           }
 
