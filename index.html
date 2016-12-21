@@ -153,17 +153,14 @@
         // Variables for the animated header.
         var slogan = document.getElementById("slogan"),
         xOff = 0,
-        yOff = 0,
+        yOff = 0
+        yMin = 0,
         xInc = 1,
         yInc = 1,
-        red = 0,
-        green = 0,
-        blue = 0,
-        width = --document.getElementById("header").clientWidth - slogan.clientWidth,
-        height = document.getElementById("header").clientHeight - slogan.clientHeight,
-        yMin = 0,
         iX = xInc,
-        iY = yInc;
+        iY = yInc,
+        width = --document.getElementById("header").clientWidth - slogan.clientWidth,
+        height = document.getElementById("header").clientHeight - slogan.clientHeight;
 
         // This makes slogan drift.
         function makeMove() {
@@ -203,25 +200,21 @@
 
         // This makes slogan color change.
         function makeColor(red, green, blue) {
-          red = red.toString(16);
-          green = green.toString(16);
-          blue = blue.toString(16);
+          var colorArr = [red, green, blue],
+          finalColor = "#";
 
-          if (red.length == 1) {
-            red = '0' + red;
+          for (var i = 0; i < 3; i++) {
+            colorArr[i] = colorArr[i].toString(16);
+
+            if (colorArr[i].length == 1) {
+              colorArr[i] = '0' + colorArr[i];
+            }
+
+            finalColor = finalColor + colorArr[i];
           }
 
-          if (green.length == 1) {
-            green = '0' + green;
-          }
-
-          if (blue.length == 1) {
-            blue = '0' + blue;
-          }
-
-          return "#" + red + green + blue;
+          return finalColor;
         }
-
         window.requestAnimationFrame(makeMove);
       }
     </script>
