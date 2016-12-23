@@ -29,11 +29,18 @@
 }
 
 /* Main part */
+nav {
+  font-size: larger;
+}
+
 .main-container {
   padding: 2% 10%;
 }
 
 /* Sidebar */
+.nav .submenu {
+  padding-left: 15%;
+}
 
 /* Main */
 .main-img-1 {

@@ -26,121 +26,128 @@
       </header>
 
       <div class="main-container row">
+
         <nav class="col-md-3">
-          <ul class="nav nav-pills nav-stacked" id="menu">
+          <ul class="nav nav-pills nav-stacked">
+
             <li>
-              <a href="base.html" target="base">
-                <span class="top">Главная</span>
-                <span class="bott">страница сайта</span>
+              <a href="index.html">
+                <span>Главная страница</span>
               </a>
             </li>
+
             <li>
-              <a href="ascor.html" target="base">
-                <span class="top">Комплекс "AsCor"</span>
-                <span class="bott">для водоёмов</span>
+              <a data-toggle="collapse" href="#collapseEquipment" role="submenu">
+                <span>Оборудование</span>
+                <!-- <span class="caret"></span> -->
+              </a>
+
+              <ul id="collapseEquipment" class="collapse nav nav-pills nav-stacked">
+
+                <li>
+                  <a href="ascor.html" class="submenu" title="для водоёмов">
+                    <span>Комплекс "AsCor"</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="netcor.html" class="submenu" title="для водотоков">
+                    <span>Комплекс "NetCor"</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="pancor.html" class="submenu" title="для мелководья">
+                    <span>Комплекс "PanCor"</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a data-toggle="collapse" href="#collapseReservoir" role="submenu">
+                <span>Водоёмы</span>
+                <!-- <span class="caret"></span> -->
+              </a>
+
+              <ul id="collapseReservoir" class="collapse nav nav-pills nav-stacked">
+
+                <li>
+                  <a href="lakes.html" class="submenu" title="вертикальная локация">
+                    <span>Моря и озера</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="rivers.html" class="submenu" title="горизонтальная локация">
+                    <span>Реки</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="shallow.html" class="submenu" title="горизонтальная локация">
+                    <span>Мелководные водоемы</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="theory.html" title="о реализации метода">
+                <span>Немного теории</span>
               </a>
             </li>
+            
             <li>
-              <a href="netcor.html" target="base">
-                <span class="top">Комплекс "NetCor"</span>
-                <span class="bott">для водотоков</span>
+              <a href="public.html">
+                <span>Публикации</span>
+                <!-- <span>наших сотрудников</span> -->
               </a>
             </li>
+            
             <li>
-              <a href="pancor.html" target="base">
-                <span class="top">Комплекс "PanCor"</span>
-                <span class="bott">для мелководья</span>
+              <a href="links.html">
+                <span>Ссылки</span>
+                <!-- <span>в сети Интернет</span> -->
               </a>
             </li>
-            <li>
-              <a href="lakes.html" target="base">
-                <span class="top">Моря и озера</span>
-                <span class="bott">вертикальная локация</span>
-              </a>
-            </li>
-            <li>
-              <a href="rivers.html" target="base">
-                <span class="top">Реки</span>
-                <span class="bott">горизонтальная локация</span>
-              </a>
-            </li>
-            <li>
-              <a href="shallow.html" target="base">
-                <span class="top">Мелководные водоемы</span>
-                <span class="bott">горизонтальная локация</span>
-              </a>
-            </li>
-            <li>
-              <a href="theory.html" target="base">
-                <span class="top">Немного теории</span>
-                <span class="bott">о реализация метода</span>
-              </a>
-            </li>
-            <li>
-              <a href="public.html" target="base">
-                <span class="top">Публикации</span>
-                <span class="bott">наших сотрудников</span>
-              </a>
-            </li>
-            <li>
-              <a href="links.html" target="base">
-                <span class="top">Ссылки</span>
-                <span class="bott">в сети Интернет</span>
-              </a>
-            </li>
-            <li>
-              <a href="history.html" target="base">
+            
+            <!-- <li>
+              <a href="history.html">
                 <span class="top">О предприятии</span>
                 <span class="bott">люди и история</span>
               </a>
-            </li>
+            </li> -->
+            
             <li>
-              <a href="contacts.html" target="base">
-                <span class="top">Контакты</span>
-                <span class="bott">связь с нами</span>
+              <a href="contacts.html" title="связь с нами">
+                <span>Контакты</span>
               </a>
             </li>
           </ul>
         </nav>
 
         <main class="col-md-9">
-          <!-- <span style="position:absolute;left:100px;top:100px;"> -->
-            <!-- <img src="img/ind1.png" title="3D батиметрия русловой ямы Иртыша"> -->
-          <!-- </span> -->
-          <!-- <span style="position:absolute;left:350px;top:150px;"> -->
-            <!-- <img SRC="img/ind2.png" title="Эхограмма омуля Байкала"> -->
-          <!-- </span> -->
-          <!-- <span style="position:absolute;left:700px;top:50px;"> -->
-            <!-- <img SRC="img/ind4.png" title="Эхограмма омуля Байкала"> -->
-          <!-- </span> -->
-          <!-- <span style="position:absolute;left:50px;top:450px;"> -->
-            <p><img src="img/ind3.png" title="Эхограмма онежской ряпушки" class="main-img-1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p><img src="img/ind7.png" title="Станция комплекса 'NetCor'" class="main-img-2">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-          <!-- </span> -->
-          <!-- <span style="position:absolute;left:650px;top:450px;"> -->
-            <!-- <img SRC="img/ind6.png" title="Эхограмма молоди озерновской нерки"> -->
-          <!-- </span> -->
-          <!-- <span style="position:absolute;left:450px;top:300px;"> -->
-            <!-- <img src="img/ind7.png" title="Станция комплекса 'NetCor'" class="main-img-2"> -->
-          <!-- </span> -->
+          <p><img src="img/ind3.png" title="Эхограмма онежской ряпушки" class="main-img-1">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p><img src="img/ind7.png" title="Станция комплекса 'NetCor'" class="main-img-2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </p>
         </main>
 
       </div>
 
       <footer class="footer row">
-        <div class="">
+        <div class="col-md-12">
           <p style="font-style:italic;font-size:80%;text-align:center">
-            &copy &reg ООО "ПромГидроакустика", 2012
+            &copy &reg ООО "ПромГидроакустика", 2017
           </p>
         </div>
       </footer>
