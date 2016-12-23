@@ -52,6 +52,14 @@ nav {
   float: right;
   margin: 10px 0 20px 20px;
 }
+
+/* Footer */
+.footer {
+  font-style: italic;
+  font-size:80%;
+  text-align: center;
+}
+
 /*ul#menu
   {
   list-style: none;
