@@ -29,15 +29,16 @@
 }
 
 /* Main part */
-nav {
-  font-size: larger;
-}
 
 .main-container {
   padding: 2% 10%;
 }
 
 /* Sidebar */
+nav {
+  font-size: larger;
+}
+
 .nav .submenu {
   padding-left: 15%;
 }
