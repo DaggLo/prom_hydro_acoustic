@@ -163,8 +163,16 @@
         yOff = 0,
         xInc = 1, // increment
         yInc = 1,
-        width = document.getElementById("header").clientWidth - slogan.clientWidth - 1,
-        height = document.getElementById("header").clientHeight - slogan.clientHeight;
+        width,
+        height;
+
+        // Header dimensions detection for the purposes of animating the slogan.
+        function headerSizeDetect() {
+          width = document.getElementById("header").clientWidth - slogan.clientWidth - 2;
+          height = document.getElementById("header").clientHeight - slogan.clientHeight;
+        }
+
+        headerSizeDetect();
 
         // This makes slogan drift.
         function makeMove() {
@@ -205,6 +213,10 @@
         }
 
         window.requestAnimationFrame(makeMove);
+
+        window.addEventListener("resize", function() {
+          window.requestAnimationFrame(headerSizeDetect);
+        });
       }
     </script>
   </body>
