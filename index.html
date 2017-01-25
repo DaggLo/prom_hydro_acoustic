@@ -184,7 +184,13 @@
             slogan.style.color = makeColor();
 
             // Switching the increment.
-            (yOff >= height || yOff <= 0) ? yInc = -yInc : xInc = -xInc;
+            (yOff == height || yOff == 0) ? yInc = -yInc : xInc = -xInc;
+
+            // This catches the slogan overshooting when viewport is resizing.
+            if (yOff > height || yOff < 0 || xOff > width + 1 || xOff < 0) {
+              xOff = 2;
+              yOff = 1;
+            }
           }
 
           slogan.style.top = yOff + "px";
