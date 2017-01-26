@@ -235,6 +235,8 @@
         window.addEventListener("resize", function() {
           window.requestAnimationFrame(headerSizeDetect);
         });
+
+        window.addEventListener('orientationchange', headerSizeDetect);
       }
     </script>
   </body>
