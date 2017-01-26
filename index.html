@@ -168,8 +168,20 @@
 
         // Header dimensions detection for the purposes of animating the slogan.
         function headerSizeDetect() {
+          var oldWidth, oldHeight;
+
           width = document.getElementById("header").clientWidth - slogan.clientWidth - 2;
           height = document.getElementById("header").clientHeight - slogan.clientHeight;
+
+          if (width == oldWidth && height == oldHeight) {
+            return;
+
+          } else {
+            oldWidth = width;
+            oldHeight = height;
+
+            window.requestAnimationFrame(headerSizeDetect);
+          }
         }
 
         headerSizeDetect();
