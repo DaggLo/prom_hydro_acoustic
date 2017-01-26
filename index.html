@@ -173,6 +173,8 @@
           width = document.getElementById("header").clientWidth - slogan.clientWidth - 2;
           height = document.getElementById("header").clientHeight - slogan.clientHeight;
 
+          // This condition checks whether the actual sizes of the header are changed
+          // in some scenarios (zooming, orientation change etc.).
           if (width == oldWidth && height == oldHeight) {
             return;
 
