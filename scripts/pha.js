@@ -30,8 +30,6 @@
     }
   }
 
-  headerSizeDetect();
-
   // This makes slogan drift.
   function makeMove() {
     yOff += yInc;
@@ -44,7 +42,7 @@
       // Switching the increment.
       (yOff == height || yOff == 0) ? yInc = -yInc : xInc = -xInc;
 
-      // This catches the slogan overshooting when viewport is resizing.
+      // This catches the slogan overshooting when viewport is resized or orientationchanged.
       if (yOff > height || yOff < 0 || xOff > width + 1 || xOff < 0) {
         xOff = 2;
         yOff = 1;
@@ -76,11 +74,15 @@
     return finalColor;
   }
 
+  headerSizeDetect();
+
   window.requestAnimationFrame(makeMove);
 
-  window.addEventListener("resize", function() {
+  window.addEventListener('resize', function() {
     window.requestAnimationFrame(headerSizeDetect);
   });
 
-  window.addEventListener('orientationchange', headerSizeDetect);
+  window.addEventListener('orientationchange', function() {
+    window.requestAnimationFrame(headerSizeDetect);
+  });
 }
